@@ -1,0 +1,336 @@
+.hero {
+    width: 84vw; 
+    height: auto;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 52px;
+    display: grid;
+    grid-template-columns: 43.5% 56.5%; 
+    align-items: center;
+    gap: 10px;
+    padding: 46px 62px;
+    position: relative;
+}
+
+
+.heroRight {
+    display: flex;
+    padding-top: 30px;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+
+.textHero{
+    z-index: 1; 
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+
+.highlightText {
+    position: absolute;
+    top: 166px; 
+    right: 60px; 
+    z-index: 1; 
+    width: 92%; 
+    height: auto;
+  }
+
+  .decoration1{
+    position: absolute;
+    top: 295px; 
+    right: 71px; 
+    z-index: 1; 
+    width: 26%; 
+    height: auto;
+}
+
+.heroDescription {
+    margin-top: 30px;
+    margin-right: 60px;
+}
+
+
+.heroLeft {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.containerFoto{
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    position: relative;
+}
+
+.svgWoman {
+    width: 100%;
+    height: auto;
+}
+
+.heroButton {
+    background-color: #00ff80;
+    border-radius: 100px;
+    border: none;
+    padding: 25px 74px;
+    display: flex;
+    gap: 19px;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    position: absolute;
+    top: 620px;
+    right: 5px;
+    cursor: pointer;
+  }
+
+
+  .heroButton span{
+    font-size: 20px;
+    font-weight: 600; 
+  }
+
+
+  /* MODAL */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.modalContent {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease-in-out;
+}
+
+iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 8px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+.containerCubes{
+  border-radius: 100px;
+  border: none;
+  padding: 25px 50px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 0px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+
+.containerCubes div{
+  display: flex;
+  background-color: var(--white);
+  padding: 12px 22px;
+  flex-direction: row;
+  border-radius: 30px;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerCubes img{
+  width: 32px;
+  height: 32px;
+}
+
+.chatgpt{
+  margin-left: -5px;
+}
+
+
+.containerGuide {
+    margin-top: 66px;
+    width: 98%;
+    height: 350px; 
+    background-image: url('../../assets/images/backgroundGuide.svg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+
+.textGuide {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 74px;
+    padding-left: 25px;
+    padding-right: 360px;
+    padding-bottom: 32px;
+  }
+  
+  .titleGuide {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .buttonGuide {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 100px;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-left: 25px;
+  }
+
+  @keyframes moveRightAndBack {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .buttonGuide img {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .buttonGuide:hover img {
+    animation: moveRightAndBack 0.5s ease-in-out;
+  }
+  
+  
+  .buttonTextGuide {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .cards{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .card1 {
+    margin-top: 25px;
+    width: 50%;
+    height: 228px;
+    background-color: var(--secondary);
+    background-image: url('../../assets/images/500+.svg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    border-radius: 55px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  
+  
+  .cardContent1 {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 35px;
+    padding-top: 20px;
+  }
+  
+  
+  .cardSubtitle1 {
+    font-size: 20px;
+    margin: 0;
+    line-height: 1.6;
+    position: relative;
+    top: -10px;
+  }
+
+  .card2 {
+    margin-top: 25px;
+    width: 50%;
+    height: 228px;
+    background-image: url('../../assets/images/driven.svg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    border-radius: 55px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+  }
+
+  .cardContent2 {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 35px;
+    color: var(--white);
+    font-size: 2.7rem;
+  }
+  
+  .conteinerStars{
+    display: flex;
+    gap: 12px;
+    padding-left:35px ;
+    padding-top: 35px;
+  }
+
+  .conteinerStars img{
+    width: 42px;
+    height: 42px;
+  }
+  
+  .cardtitle2 {
+    margin: 0;
+    line-height: 1.2;
+    position: relative;
+    top: 8px;
+  }

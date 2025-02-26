@@ -1,0 +1,21 @@
+.companies{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 125px;
+}
+
+.companies img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    filter: brightness(0) saturate(100%) invert(59%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(87%) contrast(85%);
+    transition: filter 0.4s ease-in-out;
+  }
+  
+  .companies img:hover {
+    filter: brightness(0) saturate(100%) invert(58%) sepia(64%) saturate(1120%) hue-rotate(98deg) brightness(107%) contrast(102%);
+  }
+  

@@ -1,0 +1,79 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85vw; 
+  padding: 42px 100px 37px 100px; 
+  font-weight: 500;
+  border-radius: 30px; 
+}
+
+.logo {
+  font-family: var(--logo-family);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 600;
+  line-height: 150%;
+  color: var(--black);
+}
+
+.logo img{
+  width: 32px; 
+  height: 36px; 
+}
+
+.logoText {
+  font-size: 34px;
+  letter-spacing: 0.05px;
+}
+
+.menu {
+  display: flex;
+  gap: 50px;
+}
+
+.menu span {
+  font-size: 20px; 
+  color: #383838;
+}
+
+.groupButton {
+  display: flex;
+  align-items: center;
+  gap: 40px; 
+}
+
+.groupButton span{
+  font-size: 20px;  
+}
+
+.demoButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 230px;
+  height: 60px; 
+  background-color: var(--primary);
+  border: none;
+  border-radius: 100px;
+  color: #1d1d21;
+  font-size: 20px; 
+  font-weight: 600;
+  cursor: pointer;
+  gap: 12px; 
+}
+
+@keyframes moveRightAndBack {
+  0% { transform: translateX(0); }
+  50% { transform: translate(6px, -6px); }
+  100% { transform: translateX(0); }
+}
+
+.demoButton img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.demoButton:hover img {
+  animation: moveRightAndBack 0.5s ease-in-out;
+}
