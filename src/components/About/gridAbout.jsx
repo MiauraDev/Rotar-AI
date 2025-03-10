@@ -8,29 +8,35 @@ const GridAbout = () => {
 
         {/* Card 1 */}
         <div className={`${gridAboutStyles.card} ${gridAboutStyles.card1}`}>
-          <div>
-            <div className={gridAboutStyles.profile}>
-              <div className={gridAboutStyles.ellipse}></div>
-              <span className={gridAboutStyles.profileName}>James Kokolomel</span>
-            </div>
-            <div className={gridAboutStyles.message}>I’ve forgotten my password</div>
 
-            <div className={gridAboutStyles.profile} style={{ marginTop: '24px' }}>
-              <div className={gridAboutStyles.ellipse}></div>
-              <span className={gridAboutStyles.profileName}>Rotar Robot</span>
+            <div className={gridAboutStyles.userprofile}>
+              <div className={gridAboutStyles.user}>
+                <div className={gridAboutStyles.ellipse}></div>
+                <span className={gridAboutStyles.profileName}>James Kokolomel</span>
+              </div>
+              <div className={gridAboutStyles.message}>I’ve forgotten my password</div>
             </div>
-            <div className={gridAboutStyles.robotMessage}>
-              No worries, we’ve all been in a melancholy situation like that.
-              To reset your password, go to the login page and click on Forgot
-              Password? Then, enter the email address and follow it.
+
+            <div className={gridAboutStyles.userprofile}>
+              <div className={gridAboutStyles.rotar}>
+                <div className={gridAboutStyles.ellipse}></div>
+                <span className={gridAboutStyles.profileName}>Rotar Robot</span>
+              </div>
+              <div className={gridAboutStyles.robotMessage}>
+                No worries, we’ve all been in a melancholy situation like that.
+                To reset your password, go to the login page and click on Forgot
+                Password? Then, enter the email address and follow it.
+              </div>
             </div>
-          </div>
+
+
           <div className={gridAboutStyles.textContainer}>
             <h3 className={gridAboutStyles.title}>Boost conversations 96% with AI</h3>
             <p className={gridAboutStyles.description}>
               Our AI-powered chatbots and automation tools are here to help.
             </p>
           </div>
+
         </div>
 
         {/* Card 2 */}
@@ -74,7 +80,7 @@ const GridAbout = () => {
           <div className={gridAboutStyles.chartContainer}>
             <div className={gridAboutStyles.chartCircle}>
               12,5%<br />
-              <span style={{ fontSize: '12px', fontWeight: 500 }}>Conversation<br />Employee</span>
+              <span >Conversation<br />Employee</span>
             </div>
           </div>
         </div>

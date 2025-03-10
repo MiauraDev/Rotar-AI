@@ -1,6 +1,5 @@
 import React from 'react';
 import aboutStyles from './About.module.css';
-import integrationsStyles from './ourIntegrations.module.css';
 import highlight from '../../assets/shapes/highlight2.svg';
 import decoration2 from '../../assets/shapes/decoration2.svg';
 import OurIntegrations from './ourIntegrations';

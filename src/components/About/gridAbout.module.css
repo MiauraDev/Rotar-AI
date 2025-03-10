@@ -53,23 +53,95 @@
     border-radius:58px;
     padding: 30px;
   }
+
+
+  /* Card 1*/
+
+  .gridAbout .card1 {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  .userprofile{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .rotarprofile{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
   
+  .gridAbout .user{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 17px;
+    font-size: 22.5px;
+    font-weight: 400;
+  }
   
+  .gridAbout .user .ellipse{
+    background-image: url('../../assets/images/user.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .gridAbout .card1 .message{
+    width: 61%;
+    margin-left: auto;
+    padding: 20px 18px ; 
+    background-color: var(--primary);
+    border-radius: 5.47px;
+    color: var(--black);
+    font-size: 17px;
+    text-align: center;
+  }
+
+
+  .gridAbout .rotar{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 17px;
+    font-size: 22.5px;
+    font-weight: 400;
+  }
+
+  .gridAbout .rotar .ellipse{
+    background-image: url('../../assets/icons/rotar.png');
+    background-size: 64%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+
   .gridAbout .textContainer {
     margin-bottom: 24px;
   }
   
-  .gridAbout .title {
-    font-size: 24px;
-    color: #1d1d21;
+  .gridAbout .card1 .title {
+    font-size: 33.5px;
+    color: var(--black);
+    margin: 0px;
     margin-bottom: 4px;
+    line-height: 1.2;
   }
   
-  .gridAbout .description {
-    font-size: 16px;
-    color: #5f5f5f;
+  .gridAbout .card1 .description {
+    padding-right: 10px;
+    font-size: 24px;
+    line-height: 1.4;
   }
   
+
+
+
+  /* Card 2*/
+
   .gridAbout .illustrationBlock {
     display: flex;
     flex-direction: column;
@@ -89,24 +161,10 @@
   }
   
   .gridAbout .ellipse {
-    width: 32px;
-    height: 32px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    background-color: #d9d9d9;
-  }
-  
-  .gridAbout .profileImage {
-    width: 33px;
-    height: 55px;
-    background-color: #d9d9d9;
-  }
-  
-  .gridAbout .message {
-    padding: 18px;
-    background-color: #00ff7f;
-    border-radius: 5.47px;
-    color: #000;
-    font-size: 14px;
+    background-color: var(--black);
   }
   
   .gridAbout .response {
@@ -122,34 +180,15 @@
   }
   
   .gridAbout .robotMessage {
-    padding: 18px;
+    padding: 24px 22px;
     background-color: #fff;
-    border-radius: 5.47px;
+    border-radius: 5.5px;
     color: #5f5f5f;
-    font-size: 14px;
+    font-size: 17px;
+    line-height: 1.4;
   }
   
-  .gridAbout .illustrations {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
   
-  .gridAbout .illustration {
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    background-color: #383838;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .gridAbout .icon {
-    width: 28px;
-    height: 28px;
-    background-color: #fff;
-  }
   
   .gridAbout .chatContainer {
     margin-top: 24px;
