@@ -1,0 +1,192 @@
+ /*---        About Grid          ---*/
+  
+ .gridAbout {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 72px;    
+    margin-right: 10px;
+  }
+  
+  .gridAbout .groupCard {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(8, 107px);
+    grid-column-gap: 17px;
+    grid-row-gap: 25px;
+    width: fit-content;
+  }
+  
+  
+  .gridAbout .card1 {
+    width: 385px;
+    height: auto;
+    grid-area: 1 / 1 / 6 / 2;
+    background-color: var(--background);
+  }
+  
+  .gridAbout .card2 {
+    grid-area: 1 / 2 / 5 / 3;
+    width: 385px;
+    height: auto;
+    background-color: #bcfcdc;
+
+  }
+  
+  .gridAbout .card3 {
+    grid-area: 6 / 1 / 9 / 2;
+    width: 385px;
+    height: auto;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .gridAbout .card4 {
+    grid-area: 5 / 2 / 9 / 3;
+    background-color: #00ff7f;
+    width: 385px;
+    height: auto;
+    background-color: #00ff7f;
+  }
+  
+  .gridAbout .card {
+    border-radius:50px;
+    padding: 24px;
+  }
+  
+  
+  .gridAbout .textContainer {
+    margin-bottom: 24px;
+  }
+  
+  .gridAbout .title {
+    font-size: 24px;
+    color: #1d1d21;
+    margin-bottom: 4px;
+  }
+  
+  .gridAbout .description {
+    font-size: 16px;
+    color: #5f5f5f;
+  }
+  
+  .gridAbout .illustrationBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .gridAbout .bubbleChat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .gridAbout .profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .gridAbout .ellipse {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+  }
+  
+  .gridAbout .profileImage {
+    width: 33px;
+    height: 55px;
+    background-color: #d9d9d9;
+  }
+  
+  .gridAbout .message {
+    padding: 18px;
+    background-color: #00ff7f;
+    border-radius: 5.47px;
+    color: #000;
+    font-size: 14px;
+  }
+  
+  .gridAbout .response {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .gridAbout .robotProfile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .gridAbout .robotMessage {
+    padding: 18px;
+    background-color: #fff;
+    border-radius: 5.47px;
+    color: #5f5f5f;
+    font-size: 14px;
+  }
+  
+  .gridAbout .illustrations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .gridAbout .illustration {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: #383838;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .gridAbout .icon {
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+  }
+  
+  .gridAbout .chatContainer {
+    margin-top: 24px;
+  }
+  
+  .gridAbout .chat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .gridAbout .messageBox {
+    width: 113px;
+    height: 23px;
+    border-radius: 100px;
+    background-color: #f0f0f0;
+  }
+  
+  .gridAbout .messageLine {
+    width: 229px;
+    height: 23px;
+    border-radius: 100px;
+    background-color: #f0f0f0;
+    margin-top: 12px;
+  }
+  
+  .gridAbout .pieChart {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .gridAbout .chart {
+    width: 192px;
+    height: 192px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  
+  

@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './About.module.css';
+import styles from './GridAbout.module.css';
+import styles from './ourIntegrations.module.css';
 import highlight from '../../assets/shapes/highlight2.svg';
 import decoration2 from '../../assets/shapes/decoration2.svg';
 import OurIntegrations from './ourIntegrations';

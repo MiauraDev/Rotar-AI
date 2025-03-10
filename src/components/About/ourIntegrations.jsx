@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './About.module.css';
+import styles from './ourIntegrations.module.css';
 import fondo from '../../assets/images/backgroundOurintegrations.svg';
 import teams from '../../assets/icons/microsoft-teams.svg';
 import meet from '../../assets/icons/google-meet.svg';

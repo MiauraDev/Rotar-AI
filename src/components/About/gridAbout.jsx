@@ -1,19 +1,14 @@
 import React from 'react';
 import styles from './About.module.css';
+import styles from './GridAbout.module.css';
 
 const GridAbout = () => {
   return (
     <div className={styles.gridAbout}>
       <div className={styles.groupCard}>
-        
+
         {/* Card 1 */}
         <div className={`${styles.card} ${styles.card1}`}>
-          <div className={styles.textContainer}>
-            <h3 className={styles.title}>Boost conversations 96% with AI</h3>
-            <p className={styles.description}>
-              Our AI-powered chatbots and automation tools are here to help.
-            </p>
-          </div>
           <div>
             <div className={styles.profile}>
               <div className={styles.ellipse}></div>
@@ -30,6 +25,12 @@ const GridAbout = () => {
               To reset your password, go to the login page and click on Forgot
               Password? Then, enter the email address and follow it.
             </div>
+          </div>
+          <div className={styles.textContainer}>
+            <h3 className={styles.title}>Boost conversations 96% with AI</h3>
+            <p className={styles.description}>
+              Our AI-powered chatbots and automation tools are here to help.
+            </p>
           </div>
         </div>
 
