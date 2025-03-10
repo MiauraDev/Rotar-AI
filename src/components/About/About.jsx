@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './About.module.css';
 import highlight from '../../assets/shapes/highlight2.svg';
 import OurIntegrations from './ourIntegrations';
+import GridAbout from './GridAbout';
 
 const About = () => {
   return (
@@ -22,10 +23,7 @@ const About = () => {
       </div>
 
       <div className={styles.containerGridAbout}>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+      <GridAbout/>
       </div>
     </section>
   );
