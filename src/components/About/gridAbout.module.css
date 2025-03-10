@@ -54,6 +54,20 @@
     padding: 30px;
   }
 
+  .gridAbout  .title {
+    font-size: 33.5px;
+    color: var(--black);
+    margin: 0px;
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+  
+  .gridAbout .description {
+    padding-right: 10px;
+    font-size: 23.8px;
+    line-height: 1.4;
+  }
+
 
   /* Card 1*/
 
@@ -123,24 +137,6 @@
     margin-bottom: 24px;
   }
   
-  .gridAbout .card1 .title {
-    font-size: 33.5px;
-    color: var(--black);
-    margin: 0px;
-    margin-bottom: 4px;
-    line-height: 1.2;
-  }
-  
-  .gridAbout .card1 .description {
-    padding-right: 10px;
-    font-size: 24px;
-    line-height: 1.4;
-  }
-  
-
-
-
-  /* Card 2*/
 
   .gridAbout .illustrationBlock {
     display: flex;
@@ -188,44 +184,86 @@
     line-height: 1.4;
   }
   
+
   
+
+  /* Card 2*/
   
-  .gridAbout .chatContainer {
-    margin-top: 24px;
+
+  .card2 .textContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  
+  .card2 .chatWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    width: 91%;
   }
   
-  .gridAbout .chat {
+  .card2 .chatPreview {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 4px 10px #efefef2c;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .card2 .chatTop {
     display: flex;
     align-items: center;
     gap: 12px;
+    margin-bottom: 10px;
   }
   
-  .gridAbout .messageBox {
-    width: 113px;
-    height: 23px;
-    border-radius: 100px;
-    background-color: #f0f0f0;
-  }
-  
-  .gridAbout .messageLine {
-    width: 229px;
-    height: 23px;
-    border-radius: 100px;
-    background-color: #f0f0f0;
-    margin-top: 12px;
-  }
-  
-  .gridAbout .pieChart {
-    margin-top: 24px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .gridAbout .chart {
-    width: 192px;
-    height: 192px;
+  .card2 .ellipse {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background-color: #fff;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: var(--white);
   }
   
+  .card2 .ellipse img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card2 .chatLineShort {
+    height: 30px;
+    width: 165px;
+    background: var(--background);
+    border-radius: 20px;
+  }
+  
+  .card2 .chatLineFull {
+    height: 30px;
+    width: 92%;
+    background: var(--background);
+    border-radius: 20px;
+  }
+
+  .card2 .chatPreviewWrapper {
+    position: relative;
+  }
+  
+  
+  .card2 .chatPreviewWrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 110%;
+    height: 50px;
+    background: linear-gradient(to top, #BCFCDC, rgba(255, 255, 255, 0));
+    border-radius: 0 0 14px 14px;
+    z-index: 2;
+    pointer-events: none;
+  }
   

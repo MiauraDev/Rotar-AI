@@ -1,5 +1,7 @@
 import React from 'react';
 import gridAboutStyles from './GridAbout.module.css';
+import user1 from '../../assets/images/user.jpg';
+import user2 from '../../assets/images/user1.jpg';
 
 const GridAbout = () => {
   return (
@@ -9,25 +11,25 @@ const GridAbout = () => {
         {/* Card 1 */}
         <div className={`${gridAboutStyles.card} ${gridAboutStyles.card1}`}>
 
-            <div className={gridAboutStyles.userprofile}>
-              <div className={gridAboutStyles.user}>
-                <div className={gridAboutStyles.ellipse}></div>
-                <span className={gridAboutStyles.profileName}>James Kokolomel</span>
-              </div>
-              <div className={gridAboutStyles.message}>I’ve forgotten my password</div>
+          <div className={gridAboutStyles.userprofile}>
+            <div className={gridAboutStyles.user}>
+              <div className={gridAboutStyles.ellipse}></div>
+              <span className={gridAboutStyles.profileName}>James Kokolomel</span>
             </div>
+            <div className={gridAboutStyles.message}>I’ve forgotten my password</div>
+          </div>
 
-            <div className={gridAboutStyles.userprofile}>
-              <div className={gridAboutStyles.rotar}>
-                <div className={gridAboutStyles.ellipse}></div>
-                <span className={gridAboutStyles.profileName}>Rotar Robot</span>
-              </div>
-              <div className={gridAboutStyles.robotMessage}>
-                No worries, we’ve all been in a melancholy situation like that.
-                To reset your password, go to the login page and click on Forgot
-                Password? Then, enter the email address and follow it.
-              </div>
+          <div className={gridAboutStyles.userprofile}>
+            <div className={gridAboutStyles.rotar}>
+              <div className={gridAboutStyles.ellipse}></div>
+              <span className={gridAboutStyles.profileName}>Rotar Robot</span>
             </div>
+            <div className={gridAboutStyles.robotMessage}>
+              No worries, we’ve all been in a melancholy situation like that.
+              To reset your password, go to the login page and click on Forgot
+              Password? Then, enter the email address and follow it.
+            </div>
+          </div>
 
 
           <div className={gridAboutStyles.textContainer}>
@@ -41,6 +43,43 @@ const GridAbout = () => {
 
         {/* Card 2 */}
         <div className={`${gridAboutStyles.card} ${gridAboutStyles.card2}`}>
+
+          <div className={gridAboutStyles.textContainer}>
+            <h3 className={gridAboutStyles.title}>Always accessible with our live chat.</h3>
+            <p className={gridAboutStyles.description}>
+              Enhance Communication with Real-Time Live Chat.
+            </p>
+          </div>
+
+          <div className={gridAboutStyles.chatWrapper}>
+            <div className={gridAboutStyles.chatPreview}>
+              <div className={gridAboutStyles.chatTop}>
+                <div className={gridAboutStyles.ellipse}>
+                  <img src={user1} alt="avatar" />
+                </div>
+                <div className={gridAboutStyles.chatLineShort}></div>
+              </div>
+              <div className={gridAboutStyles.chatLineFull}></div>
+            </div>
+
+            <div className={gridAboutStyles.chatPreviewWrapper}>
+              <div className={gridAboutStyles.chatPreview}>
+                <div className={gridAboutStyles.chatTop}>
+                  <div className={gridAboutStyles.ellipse}>
+                    <img src={user2} alt="avatar" />
+                  </div>
+                  <div className={gridAboutStyles.chatLineShort}></div>
+                </div>
+                <div className={gridAboutStyles.chatLineFull}></div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        {/* Card 3 */}
+        <div className={`${gridAboutStyles.card} ${gridAboutStyles.card3}`}>
           <div className={gridAboutStyles.textContainer}>
             <h3 className={gridAboutStyles.title}>Centralize Your Communication</h3>
             <p className={gridAboutStyles.description}>
@@ -52,20 +91,6 @@ const GridAbout = () => {
             <div className={gridAboutStyles.illustrationIcon}><div className={gridAboutStyles.iconPlaceholder}></div></div>
             <div className={gridAboutStyles.illustrationIcon}><div className={gridAboutStyles.iconPlaceholder}></div></div>
             <div className={gridAboutStyles.illustrationIcon}><div className={gridAboutStyles.iconPlaceholder}></div></div>
-          </div>
-        </div>
-
-        {/* Card 3 */}
-        <div className={`${gridAboutStyles.card} ${gridAboutStyles.card3}`}>
-          <div className={gridAboutStyles.textContainer}>
-            <h3 className={gridAboutStyles.title}>Always accessible with our live chat.</h3>
-            <p className={gridAboutStyles.description}>
-              Enhance Communication with Real-Time Live Chat.
-            </p>
-          </div>
-          <div className={gridAboutStyles.chatPreview}>
-            <div className={gridAboutStyles.chatPreviewLine + ' ' + gridAboutStyles.full}></div>
-            <div className={gridAboutStyles.chatPreviewLine + ' ' + gridAboutStyles.short}></div>
           </div>
         </div>
 
