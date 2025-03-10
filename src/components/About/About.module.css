@@ -40,7 +40,7 @@
   .aboutcontainerright{
     display: flex;
     flex-direction: column;
-    gap: 4.2rem;
+    gap: 5.5em;
   }
 
   .containerGridAbout {
@@ -53,7 +53,7 @@
   .cardOurIntegrations{
     position: relative;
     width: 100%;
-    height: 420px;
+    height: 460px;
     background-color: #fafafa;
     border-radius: 40px;
     overflow: hidden;
@@ -66,7 +66,6 @@
     gap: 45px;
     justify-content: space-between;
   }
-
 
   .backgroundImage {
     position: absolute;
@@ -104,8 +103,7 @@
     height: 125px;
     transform: translateY(-35px); 
   }
-  
-  .illustration2 {
+    .illustration2 {
     width: 155px;
     height: 155px;
     transform: translate(-12px, 45px);
@@ -189,28 +187,37 @@
     margin: 0;
     line-height: 1.6;
   }
-  
 
+  
+  /*---        About Grid          ---*/
+  
+  .gridAbout {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 72px;    
+    margin-right: 10px;
+  }
+  
   .gridAbout .groupCard {
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 107px);
     grid-column-gap: 17px;
-    grid-row-gap: 10px;
-    margin-left: auto;
+    grid-row-gap: 25px;
     width: fit-content;
   }
   
   
   .gridAbout .card1 {
-    width: 390px;
+    width: 385px;
     height: auto;
     grid-area: 1 / 1 / 6 / 2;
   }
   
   .gridAbout .card2 {
     grid-area: 1 / 2 / 5 / 3;
-    width: 390px;
+    width: 385px;
     height: auto;
     background-color: #bcfcdc;
 
@@ -218,7 +225,7 @@
   
   .gridAbout .card3 {
     grid-area: 6 / 1 / 9 / 2;
-    width: 390px;
+    width: 385px;
     height: auto;
     background-color: #000;
     color: #fff;
@@ -227,7 +234,7 @@
   .gridAbout .card4 {
     grid-area: 5 / 2 / 9 / 3;
     background-color: #00ff7f;
-    width: 390px;
+    width: 385px;
     height: auto;
     background-color: #00ff7f;
   }
