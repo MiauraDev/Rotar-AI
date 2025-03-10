@@ -6,7 +6,7 @@ import OurIntegrations from './ourIntegrations';
 const About = () => {
   return (
     <section className={styles.about}>
-      <div>
+      <div className={styles.aboutcontainerright}>
         <div className={styles.aboutleft}>
           <div className={styles.titleWrapper}>
             <img src={highlight} alt="highlight" className={styles.highlight2} />
