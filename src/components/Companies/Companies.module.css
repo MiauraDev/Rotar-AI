@@ -17,5 +17,6 @@
   
   .companies img:hover {
     filter: brightness(0) saturate(100%) invert(58%) sepia(64%) saturate(1120%) hue-rotate(98deg) brightness(107%) contrast(102%);
+    cursor: pointer;
   }
   
