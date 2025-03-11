@@ -12,7 +12,7 @@
   height: 200px;
   margin: 10px;
   filter: brightness(0) saturate(100%) invert(59%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(87%) contrast(85%);
-  transition: filter 1s ease-in-out;
+  transition: filter 0.2s ease-in-out;
 }
 
 .companies img:hover {

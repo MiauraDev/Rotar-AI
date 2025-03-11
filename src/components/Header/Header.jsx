@@ -17,7 +17,7 @@ const Header = () => {
         <span>Pricing</span>
       </div>
       <div className={styles.groupButton}>
-        <span>Login</span>
+        <span>ES | EN</span>
         <button className={styles.demoButton}>
           Book a demo
           <img src={arrow} alt="Arrow" />
