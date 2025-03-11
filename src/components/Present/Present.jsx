@@ -1,6 +1,5 @@
-import { useState } from "react";
+import React, { useState, useEffect } from 'react';
 
-import React from 'react';
 import styles from './Present.module.css';
 import woman from '../../assets/images/woman.svg';
 import highlight from '../../assets/shapes/highlight.svg';
@@ -10,9 +9,14 @@ import play from '../../assets/icons/play.svg';
 import star from '../../assets/icons/star.png';
 import cube1 from '../../assets/icons/cube1.svg';
 import cube2 from '../../assets/icons/cube2.svg';
+import AOS from 'aos';
 
 
 const Present = () => {
+    useEffect(() => {
+      AOS.init({ duration: 600 });
+    }, []);
+  
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => setIsOpen(true);
@@ -69,11 +73,14 @@ const Present = () => {
       )}
 
           <div className={styles.containerCubes}>
-            <div className={styles.chatbot}>
+            <div className={styles.chatbot}  data-aos="fade-right">
               <img src={cube2} alt="cube2" />
               <span> Chatbot</span>
             </div>
-            <div className={styles.chatgpt}>
+            <div className={styles.chatgpt} data-aos="fade-right"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500">
               <img src={cube1} alt="cube1" />
               <span> Chat GPT 4</span>
             </div>
@@ -81,15 +88,17 @@ const Present = () => {
 
         </div  >
 
-        <div className={styles.cards}>
-          <div className={styles.card1}>
+        <div className={styles.cards} >
+          <div className={styles.card1} data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
             <div className={styles.cardContent1}>
               <h1>+ 500</h1>
               <p className={styles.cardSubtitle1}>Big companies use Rotar AI for <br />their services</p>
             </div>
           </div>
 
-          <div className={styles.card2}>
+          <div className={styles.card2} data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
             <div className={styles.conteinerStars}>
               <img src={star} alt="star" />
               <img src={star} alt="star" />

@@ -9,6 +9,7 @@ import { TakeControl } from './components/TakeControl/TakeControl';
 import { StartProject } from './components/StartProject/StartProject';
 import { Testimoni } from './components/Testimoni/Testimoni';
 import { Footer } from './components/Footer/Footer';
+import 'aos/dist/aos.css';
 
 function App() {
   

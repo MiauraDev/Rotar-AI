@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import styles from './Advantage.module.css';
 import highlight from '../../assets/shapes/highlight3.svg';
@@ -7,9 +7,13 @@ import decoration3 from '../../assets/shapes/decoration3.svg';
 import chat1 from '../../assets/images/chatmode1.svg';
 import chat2 from '../../assets/images/chatmode2.svg';
 import chat3 from '../../assets/images/chatmode3.svg';
+import AOS from 'aos';
 
 
 const Advantage = () => {
+  useEffect(() => {
+    AOS.init({ duration: 600 });
+  }, []);
   const [activeAccordion, setActiveAccordion] = useState('engage');
 
   const handleAccordionClick = (section) => {
@@ -92,6 +96,8 @@ const Advantage = () => {
               src={getImageBySection()}
               alt="Chatbot Illustration"
               className={styles.illustrationImage}
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
             />
           </div>
         </div>

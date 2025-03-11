@@ -1,6 +1,5 @@
+import React, { useEffect } from 'react';
 
-
-import React from 'react';
 import gridAboutStyles from './GridAbout.module.css';
 import user1 from '../../assets/images/user.jpg';
 import user2 from '../../assets/images/user1.jpg';
@@ -9,14 +8,18 @@ import messenger from '../../assets/icons/messenger.svg';
 import instagram from '../../assets/icons/instagram.svg';
 import x from '../../assets/icons/x.svg';
 import rotar from '../../assets/icons/rotar.svg';
+import AOS from 'aos';
 import {
   CircularProgressbar,
-  buildStyles
 } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 
 const GridAbout = () => {
+  useEffect(() => {
+    AOS.init({ duration: 600 });
+  }, []);
+
   return (
     <div className={gridAboutStyles.gridAbout}>
       <div className={gridAboutStyles.groupCard}>
@@ -24,20 +27,20 @@ const GridAbout = () => {
         {/* Card 1 */}
         <div className={`${gridAboutStyles.card} ${gridAboutStyles.card1}`}>
 
-          <div className={gridAboutStyles.userprofile}>
-            <div className={gridAboutStyles.user}>
+          <div className={gridAboutStyles.userprofile}  >
+            <div className={gridAboutStyles.user} data-aos="fade-left" data-aos-delay="100">
               <div className={gridAboutStyles.ellipse}></div>
               <span className={gridAboutStyles.profileName}>James Kokolomel</span>
             </div>
-            <div className={gridAboutStyles.message}>I’ve forgotten my password</div>
+            <div className={gridAboutStyles.message} data-aos="fade-left" data-aos-delay="200" >I’ve forgotten my password</div>
           </div>
 
           <div className={gridAboutStyles.userprofile}>
-            <div className={gridAboutStyles.rotar}>
+            <div className={gridAboutStyles.rotar} data-aos="fade-right" data-aos-delay="100" > 
               <div className={gridAboutStyles.ellipse}></div>
               <span className={gridAboutStyles.profileName}>Rotar Robot</span>
             </div>
-            <div className={gridAboutStyles.robotMessage}>
+            <div className={gridAboutStyles.robotMessage} data-aos="fade-right" data-aos-delay="200">
               No worries, we’ve all been in a melancholy situation like that.
               To reset your password, go to the login page and click on Forgot
               Password? Then, enter the email address and follow it.
@@ -56,7 +59,6 @@ const GridAbout = () => {
 
         {/* Card 2 */}
         <div className={`${gridAboutStyles.card} ${gridAboutStyles.card2}`}>
-
           <div className={gridAboutStyles.textContainer}>
             <h3 className={gridAboutStyles.title}>Always accessible with our live chat.</h3>
             <p className={gridAboutStyles.description}>
@@ -65,7 +67,8 @@ const GridAbout = () => {
           </div>
 
           <div className={gridAboutStyles.chatWrapper}>
-            <div className={gridAboutStyles.chatPreview}>
+            <div className={gridAboutStyles.chatPreview} data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" data-aos-delay="150">
               <div className={gridAboutStyles.chatTop}>
                 <div className={gridAboutStyles.ellipse}>
                   <img src={user1} alt="avatar" />
@@ -75,7 +78,8 @@ const GridAbout = () => {
               <div className={gridAboutStyles.chatLineFull}></div>
             </div>
 
-            <div className={gridAboutStyles.chatPreviewWrapper}>
+            <div className={gridAboutStyles.chatPreviewWrapper}  data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom" data-aos-delay="200">
               <div className={gridAboutStyles.chatPreview}>
                 <div className={gridAboutStyles.chatTop}>
                   <div className={gridAboutStyles.ellipse}>
