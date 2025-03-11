@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import styles from './Advantage.module.css';
 import highlight from '../../assets/shapes/highlight3.svg';
 import arrow from '../../assets/icons/arrow-up-right-white.svg';
 import decoration3 from '../../assets/shapes/decoration3.svg';
-import chat1 from '../../assets/images/chatmode1.png';
+import chat1 from '../../assets/images/chatmode1.svg';
+import chat2 from '../../assets/images/chatmode2.svg';
+import chat3 from '../../assets/images/chatmode3.svg';
 
 
 const Advantage = () => {
+  const [activeAccordion, setActiveAccordion] = useState('engage');
+
+  const handleAccordionClick = (section) => {
+    setActiveAccordion(section);
+  };
+
+  const getImageBySection = () => {
+    if (activeAccordion === 'nurture') return chat2;
+    if (activeAccordion === 'qualify') return chat3;
+    return chat1; // engage por defecto
+  };
   return (
     <div className={styles.advantage}>
       <div className={styles.advantageTop}>
@@ -41,19 +55,30 @@ const Advantage = () => {
         <div className={styles.contentWrapper}>
           {/* Accordions */}
           <div className={styles.containerAccordion}>
-            <div className={`${styles.accordion} ${styles.active}`}>
+            <div
+              className={`${styles.accordion} ${activeAccordion === 'engage' ? styles.active : ''}`}
+              onClick={() => handleAccordionClick('engage')}
+            >
               <h3>Engage</h3>
               <p>
                 Reach out to visitors proactively using personalized chatbot greetings. Turn website visits into sales opportunities.
               </p>
             </div>
-            <div className={styles.accordion}>
+
+            <div
+              className={`${styles.accordion} ${activeAccordion === 'nurture' ? styles.active : ''}`}
+              onClick={() => handleAccordionClick('nurture')}
+            >
               <h3>Nurture</h3>
               <p>
                 Lead customers to a sale through recommended purchases and tailored offerings.
               </p>
             </div>
-            <div className={styles.accordion}>
+
+            <div
+              className={`${styles.accordion} ${activeAccordion === 'qualify' ? styles.active : ''}`}
+              onClick={() => handleAccordionClick('qualify')}
+            >
               <h3>Qualify</h3>
               <p>
                 Generate and qualify prospects automatically. Transfer high-intent leads to your sales reps in real time to shorten the sales cycle.
@@ -61,9 +86,13 @@ const Advantage = () => {
             </div>
           </div>
 
-          {/* Chat Image */}
+          {/* Imagen dinámica */}
           <div className={styles.illustrations}>
-            <img src={chat1} alt="Chatbot Illustration" className={styles.illustrationImage} />
+            <img
+              src={getImageBySection()}
+              alt="Chatbot Illustration"
+              className={styles.illustrationImage}
+            />
           </div>
         </div>
       </div>

@@ -107,3 +107,72 @@
 }
 
 
+.advantage .background {
+    padding-top: 70px;
+    padding-bottom: 18px;
+  }
+  
+  .advantage .contentWrapper {
+    display: grid;
+    grid-template-columns: 38.5% 61.5%;
+    gap: 20px;
+    align-items: center;
+  }
+  
+
+  .advantage .containerAccordion {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .advantage .accordion {
+    background-color: transparent;
+    height: 150px;
+    padding: 28px;
+    padding-right: 80px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .advantage .accordion.active {
+    background-color: var(--grey); 
+    border-radius: 30px;
+  }
+  
+
+  .advantage .accordion h3 {
+    font-size: 1.728rem;
+    font-weight: 600;
+    margin: 0px;
+    margin-bottom: 16px;
+    color: var(--black);
+
+  }
+
+  .advantage .accordion p{
+    line-height: 1.75;
+  }
+  
+
+  .advantage .illustrations {
+    background-image: url(../../assets/images/background-chatmode.svg);
+    background-repeat: no-repeat;
+    background-size: cover;        
+    background-position: center; 
+    border-radius: 40px;
+    padding: 88px 0px;
+    width: 98.8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .advantage .illustrationImage {
+    width: 80%;
+    border-radius: 30px;
+    height: auto;
+    object-fit: contain;
+  }
+  
