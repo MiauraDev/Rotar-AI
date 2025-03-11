@@ -2,6 +2,17 @@ import React from 'react';
 import gridAboutStyles from './GridAbout.module.css';
 import user1 from '../../assets/images/user.jpg';
 import user2 from '../../assets/images/user1.jpg';
+import whatsapp from '../../assets/icons/whatsapp.svg';
+import messenger from '../../assets/icons/messenger.svg';
+import instagram from '../../assets/icons/instagram.svg';
+import x from '../../assets/icons/x.svg';
+import rotar from '../../assets/icons/rotar.svg';
+import {
+  CircularProgressbar,
+  buildStyles
+} from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+
 
 const GridAbout = () => {
   return (
@@ -86,29 +97,66 @@ const GridAbout = () => {
               Easily respond to chats from all of your channels in one overview.
             </p>
           </div>
+
           <div className={gridAboutStyles.illustrations}>
-            <div className={gridAboutStyles.illustrationIcon}><div className={gridAboutStyles.iconPlaceholder}></div></div>
-            <div className={gridAboutStyles.illustrationIcon}><div className={gridAboutStyles.iconPlaceholder}></div></div>
-            <div className={gridAboutStyles.illustrationIcon}><div className={gridAboutStyles.iconPlaceholder}></div></div>
-            <div className={gridAboutStyles.illustrationIcon}><div className={gridAboutStyles.iconPlaceholder}></div></div>
+            <div className={`${gridAboutStyles.iconWrapper} ${gridAboutStyles.iconTopLeft} ${gridAboutStyles.floatWrapper}`}>
+              <div className={gridAboutStyles.icon}>
+                <img src={whatsapp} alt="WhatsApp" />
+              </div>
+            </div>
+            <div className={`${gridAboutStyles.iconWrapper} ${gridAboutStyles.iconTopRight} ${gridAboutStyles.floatWrapper}`}>
+              <div className={gridAboutStyles.icon}>
+                <img src={instagram} alt="Instagram" />
+              </div>
+            </div>
+            <div className={`${gridAboutStyles.iconWrapper} ${gridAboutStyles.iconCenter}`}>
+              <div className={gridAboutStyles.icon}>
+                <img src={rotar} alt="Main Icon" />
+              </div>
+            </div>
+            <div className={`${gridAboutStyles.iconWrapper} ${gridAboutStyles.iconBottomLeft} ${gridAboutStyles.floatWrapper}`}>
+              <div className={gridAboutStyles.icon}>
+                <img src={messenger} alt="Messenger" />
+              </div>
+            </div>
+            <div className={`${gridAboutStyles.iconWrapper} ${gridAboutStyles.iconBottomRight} ${gridAboutStyles.floatWrapper}`}>
+              <div className={gridAboutStyles.icon}>
+                <img src={x} alt="Twitter" />
+              </div>
+            </div>
           </div>
         </div>
 
+
+
         {/* Card 4 */}
         <div className={`${gridAboutStyles.card} ${gridAboutStyles.card4}`}>
+          <div className={gridAboutStyles.chartContainer}>
+            <div className={gridAboutStyles.chartCircle}>
+              <CircularProgressbar
+                value={12.5}
+                text={`12.5%`}
+                styles={buildStyles({
+                  textColor: '#101010',
+                  pathColor: '#101010', 
+                  trailColor: '#ffffff',   
+                  textSize: '16px'
+                })}
+              />
+              <div className={gridAboutStyles.chartLabel}>
+                Conversation<br />Employee
+              </div>
+            </div>
+          </div>
+
           <div className={gridAboutStyles.textContainer}>
             <h3 className={gridAboutStyles.title}>Gain valuable insights from your audience</h3>
             <p className={gridAboutStyles.description}>
               Statistics provide valuable insights into how customers interact with Rotar AI.
             </p>
           </div>
-          <div className={gridAboutStyles.chartContainer}>
-            <div className={gridAboutStyles.chartCircle}>
-              12,5%<br />
-              <span >Conversation<br />Employee</span>
-            </div>
-          </div>
         </div>
+
 
       </div>
     </div>

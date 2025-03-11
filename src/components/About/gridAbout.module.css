@@ -29,7 +29,7 @@
     grid-area: 1 / 2 / 5 / 3;
     width: 373px;
     height: auto;
-    background-color: #bcfcdc;
+    background-color: var(--secondary);
 
   }
   
@@ -37,16 +37,15 @@
     grid-area: 6 / 1 / 9 / 2;
     width: 373px;
     height: auto;
-    background-color: #000;
+    background-color: var(--black);
     color: #fff;
   }
   
   .gridAbout .card4 {
     grid-area: 5 / 2 / 9 / 3;
-    background-color: #00ff7f;
+    background-color: var(--primary);
     width: 373px;
     height: auto;
-    background-color: #00ff7f;
   }
   
   .gridAbout .card {
@@ -55,21 +54,25 @@
   }
 
   .gridAbout  .title {
-    font-size: 33.5px;
+    font-size: 34.5px;
     color: var(--black);
+    font-weight: 600;
     margin: 0px;
     margin-bottom: 4px;
     line-height: 1.2;
   }
   
   .gridAbout .description {
-    padding-right: 10px;
-    font-size: 23.8px;
+    font-size: 23.75px;
     line-height: 1.4;
   }
 
 
   /* Card 1*/
+
+  .gridAbout .card1 .description {
+    padding-right: 10px;
+  }
 
   .gridAbout .card1 {
     display: flex;
@@ -265,5 +268,126 @@
     border-radius: 0 0 14px 14px;
     z-index: 2;
     pointer-events: none;
+  }
+  
+
+  
+  /* Card 3*/
+  
+  .gridAbout .card3 .title {
+    color: var(--white);
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+  
+  .gridAbout .card3 .description {
+    color: var(--white);
+    font-size: 23.78px;
+    line-height: 1.4;
+  }
+
+  .card3 .illustrations {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 24px;
+  }
+  
+  .card3 .iconWrapper {
+    position: absolute;
+  }
+  
+  .card3 .icon {
+    background-color: #383838;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card3 .iconTopLeft .icon{  
+    width: 70px;
+    height: 70px;
+  }
+
+  .card3 .iconTopRight .icon{  
+    width: 65px;
+    height: 65px;
+  }
+
+  .card3  .iconCenter.icon{  
+    width: 80px;
+    height: 80px;
+  }
+
+  .card3 .iconBottomLeft .icon{  
+    width: 68px;
+    height: 68px;
+  }
+
+  .card3 .iconBottomRight .icon{  
+    width: 62px;
+    height: 62px;
+  }
+
+ 
+  .card3 .iconTopLeft {
+    top: 0;
+    left: -82px;
+  }
+  
+  .card3 .iconTopRight {
+    top: 0;
+    right: -86px;
+  }
+  
+  .card3 .iconCenter {
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .card3 .iconBottomLeft {
+    bottom: 40px;
+    left: -40px;
+  }
+  
+  .card3 .iconBottomRight {
+    bottom:  50px;
+    right: -40px;
+  }
+  
+
+  .card3 .icon img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+  }
+  
+
+  .card3 .iconCenter .icon {
+    width: 85px;
+    height: 85px;
+  }
+  
+  .card3 .iconCenter .icon img {
+    width: 65%;
+    height: 65%;
+  }
+  
+
+  @keyframes floatUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  
+  .floatWrapper {
+    animation: floatUpDown 4s ease-in-out infinite;
+    transition: transform 0.3s ease;
   }
   
