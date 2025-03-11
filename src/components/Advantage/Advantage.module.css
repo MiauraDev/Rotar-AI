@@ -1,0 +1,75 @@
+.advantage {
+    width: 84vw;
+    height: auto;
+    background-image: url(../../assets/images/BackgroundAdvantage.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    border-radius: 52px;
+    align-items: center;
+    padding: 46px 62px;
+    position: relative;
+    margin-top: 5.5rem;
+  }
+
+  .advantageTop{
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 29% 70%;
+    gap: 20px;
+  }
+
+  .advantageTop .textSection{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+  }
+  .advantageTop .title{
+    padding-inline: 55px;
+  }
+
+  .advantageTop .textSection p{
+    padding-right: 100px;
+    margin-top: 30px;
+  }
+
+
+  .advantageTop button{
+    width: 90%;
+    height: 58px;
+    background-color: var(--black);
+    border-radius: 100px;
+    color: var(--white);
+  }
+
+
+  .advantage .background {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 40px; 
+  }
+  
+  .advantage .containerAccordion {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .advantage .illustrations {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .advantage .illustrationImage {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+  }
+  

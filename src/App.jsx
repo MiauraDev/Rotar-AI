@@ -4,6 +4,7 @@ import { Header } from './components/Header/Header';
 import { Present } from './components/Present/Present';
 import { Companies } from './components/Companies/Companies';
 import { About } from './components/About/About';
+import { Advantage } from './components/Advantage/Advantage';
 import { TakeControl } from './components/TakeControl/TakeControl';
 import { StartProject } from './components/StartProject/StartProject';
 import { Testimoni } from './components/Testimoni/Testimoni';
@@ -18,6 +19,7 @@ function App() {
       <Present />
       <Companies />
       <About />
+      <Advantage />
       <TakeControl />
       <StartProject />
       <Testimoni />
