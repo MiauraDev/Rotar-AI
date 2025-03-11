@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import gridAboutStyles from './GridAbout.module.css';
 import user1 from '../../assets/images/user.jpg';
@@ -135,14 +137,26 @@ const GridAbout = () => {
             <div className={gridAboutStyles.chartCircle}>
               <CircularProgressbar
                 value={12.5}
-                text={`12.5%`}
-                styles={buildStyles({
-                  textColor: '#101010',
-                  pathColor: '#101010', 
-                  trailColor: '#ffffff',   
-                  textSize: '16px'
-                })}
+                text={`12,5%`}
+                strokeWidth={8.5}
+                styles={{
+                  path: {
+                    stroke: '#101010',
+                    strokeLinecap: 'butt',
+                  },
+                  trail: {
+                    stroke: '#ffffff',
+                  },
+                  text: {
+                    fill: '#101010',
+                    fontSize: '21.5px',
+                    fontWeight: 700,
+                    fontFamily: 'IBM Plex Sans, sans-serif',
+                    dominantBaseline: 'auto',
+                  },
+                }}
               />
+
               <div className={gridAboutStyles.chartLabel}>
                 Conversation<br />Employee
               </div>
