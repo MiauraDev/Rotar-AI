@@ -1,0 +1,21 @@
+{
+    "navbar": {
+        "product": "Producto",
+        "solutions": "Soluciones",
+        "resources": "Recursos",
+        "pricing": "Precios",
+        "demo": "Reservar demo"
+    },
+    "present": {
+        "title": "El Aliado Ideal\n▚ IA para Atender\na tu Cliente",
+        "description": "Adopta la tecnología de chatbot con IA en una herramienta de comunicación respaldada por GPT-4 para ayudar a tus clientes, empoderar a tu equipo y reducir tu carga de trabajo.",
+        "guideTitle": "Guía: Manual de tutorial de Rotar AI",
+        "guideDescription": "Todo lo que necesitas para tus primeros pasos en los chatbots.",
+        "readArticle": "Leer artículo",
+        "watchTutorial": "Ver tutorial",
+        "chatbot": "Chatbot",
+        "chatgpt": "Chat GPT 4",
+        "cardSubtitle": "Grandes empresas usan Rotar AI para sus servicios",
+        "cardTitle": "Servicio al cliente impulsado por IA"
+    }
+}

@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
+
 
 import styles from './Present.module.css';
 import woman from '../../assets/images/woman.svg';
@@ -11,14 +14,14 @@ import cube1 from '../../assets/icons/cube1.svg';
 import cube2 from '../../assets/icons/cube2.svg';
 import AOS from 'aos';
 
-
 const Present = () => {
-    useEffect(() => {
-      AOS.init({ duration: 600 });
-    }, []);
-  
-  const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
+  useEffect(() => {
+    AOS.init({ duration: 600 });
+  }, []);
+
+  const [isOpen, setIsOpen] = useState(false);
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
 
@@ -29,20 +32,24 @@ const Present = () => {
         <img src={decoration1} alt="decoration1" className={styles.decoration1} />
         <div className={styles.textHero}>
           <h1>
-            The Ultimate AI Customer Service Companion
+            {t('present.title').split('\n').map((line, index) => (
+              <React.Fragment key={index}>
+                {line}<br />
+              </React.Fragment>
+            ))}
           </h1>
+
+
           <p className={styles.heroDescription}>
-            Embrace AI chatbot technology in a GPT-4-supported communication tool to help your customers, empower your <br /> team, and reduce your workload.
+            {t('present.description')}
           </p>
           <div className={styles.containerGuide}>
             <div className={styles.textGuide}>
-              <h2 className={styles.titleGuide}>Guide: The Rotar AI Tutorial Hand Book</h2>
-              <p>
-                Everything you need to know about the first steps in chatbots.
-              </p>
+              <h2 className={styles.titleGuide}>{t('present.guideTitle')}</h2>
+              <p>{t('present.guideDescription')}</p>
             </div>
             <div className={styles.buttonGuide}>
-              <span className={styles.buttonTextGuide}>Read Article</span>
+              <span className={styles.buttonTextGuide}>{t('present.readArticle')}</span>
               <img src={arrow} alt="arrow" />
             </div>
           </div>
@@ -50,67 +57,61 @@ const Present = () => {
       </div>
 
       <div className={styles.heroLeft}>
-        <div className={styles.containerFoto} >
+        <div className={styles.containerFoto}>
           <img src={woman} alt="woman" className={styles.svgWoman} />
           <button className={styles.heroButton} onClick={openModal}>
-        <span> Watch Tutorial</span>
-        <img src={play} alt="play" />
-      </button>
+            <span>{t('present.watchTutorial')}</span>
+            <img src={play} alt="play" />
+          </button>
 
-      {isOpen && (
-        <div className={styles.modalOverlay} onClick={closeModal}>
-          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-            <iframe
-              src="https://www.youtube.com/embed/rxKFcTRQ_bM?autoplay=1"
-              title="YouTube Video"
-              frameBorder="0"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-            ></iframe>
-            <button className={styles.closeButton} onClick={closeModal}>×</button>
-          </div>
-        </div>
-      )}
+          {isOpen && (
+            <div className={styles.modalOverlay} onClick={closeModal}>
+              <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+                <iframe
+                  src={i18n.language === 'es'
+                    ? 'https://www.youtube.com/embed/v6tk0CxaVU8?si=vnHiJ-TvIAwKS1Ps&autoplay=1'
+                    : 'https://www.youtube.com/embed/rxKFcTRQ_bM?autoplay=1'}
+                  title="YouTube Video"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                ></iframe>
+ <button className={styles.closeButton} onClick={closeModal}>×</button>
+              </div>
+            </div>
+          )}
 
           <div className={styles.containerCubes}>
-            <div className={styles.chatbot}  data-aos="fade-right">
+            <div className={styles.chatbot} data-aos="fade-right">
               <img src={cube2} alt="cube2" />
-              <span> Chatbot</span>
+              <span>{t('present.chatbot')}</span>
             </div>
-            <div className={styles.chatgpt} data-aos="fade-right"
-     data-aos-anchor="#example-anchor"
-     data-aos-offset="500"
-     data-aos-duration="500">
+            <div className={styles.chatgpt} data-aos="fade-right" data-aos-offset="500">
               <img src={cube1} alt="cube1" />
-              <span> Chat GPT 4</span>
+              <span>{t('present.chatgpt')}</span>
             </div>
           </div>
+        </div>
 
-        </div  >
-
-        <div className={styles.cards} >
-          <div className={styles.card1} data-aos="fade-up"
-     data-aos-anchor-placement="bottom-bottom">
+        <div className={styles.cards}>
+          <div className={styles.card1} data-aos="fade-up">
             <div className={styles.cardContent1}>
               <h1>+ 500</h1>
-              <p className={styles.cardSubtitle1}>Big companies use Rotar AI for <br />their services</p>
+              <p className={styles.cardSubtitle1}>{t('present.cardSubtitle')}</p>
             </div>
           </div>
 
-          <div className={styles.card2} data-aos="fade-up"
-     data-aos-anchor-placement="bottom-bottom">
+          <div className={styles.card2} data-aos="fade-up">
             <div className={styles.conteinerStars}>
               <img src={star} alt="star" />
               <img src={star} alt="star" />
               <img src={star} alt="star" />
             </div>
             <div className={styles.cardContent2}>
-              <span className={styles.cardtitle2}>AI-driven customer service</span>
+              <span className={styles.cardtitle2}>{t('present.cardTitle')}</span>
             </div>
           </div>
         </div>
       </div>
-
     </section>
   );
 };

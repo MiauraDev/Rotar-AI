@@ -1,0 +1,21 @@
+{
+    "navbar": {
+        "product": "Product",
+        "solutions": "Solutions",
+        "resources": "Resources",
+        "pricing": "Pricing",
+        "demo": "Book a demo"
+    },
+    "present": {
+        "title": "The Ultimate AI Customer Service Companion",
+        "description": "Embrace AI chatbot technology in a GPT-4-supported communication tool to help your customers, empower your team, and reduce your workload.",
+        "guideTitle": "Guide: The Rotar AI Tutorial Hand Book",
+        "guideDescription": "Everything you need to know about the first steps in chatbots.",
+        "readArticle": "Read Article",
+        "watchTutorial": "Watch Tutorial",
+        "chatbot": "Chatbot",
+        "chatgpt": "Chat GPT 4",
+        "cardSubtitle": "Big companies use Rotar AI for their services",
+        "cardTitle": "AI-driven customer service"
+    }
+}
