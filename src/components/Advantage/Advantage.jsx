@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import styles from './Advantage.module.css';
 import highlight from '../../assets/shapes/highlight3.svg';
@@ -9,12 +10,13 @@ import chat2 from '../../assets/images/chatmode2.svg';
 import chat3 from '../../assets/images/chatmode3.svg';
 import AOS from 'aos';
 
-
 const Advantage = () => {
+  const { t } = useTranslation();
+  const [activeAccordion, setActiveAccordion] = useState('engage');
+
   useEffect(() => {
     AOS.init({ duration: 600 });
   }, []);
-  const [activeAccordion, setActiveAccordion] = useState('engage');
 
   const handleAccordionClick = (section) => {
     setActiveAccordion(section);
@@ -23,74 +25,58 @@ const Advantage = () => {
   const getImageBySection = () => {
     if (activeAccordion === 'nurture') return chat2;
     if (activeAccordion === 'qualify') return chat3;
-    return chat1; // engage por defecto
+    return chat1;
   };
+
   return (
     <div className={styles.advantage}>
       <div className={styles.advantageTop}>
         <div className={styles.textSection}>
-          <p>
-            Throughout your customer's entire buying
-            journey, Rotar Al allow you to delight them
-            at every step of the way, from their first
-            visit to the final purchase.          </p>
+          <p>{t('advantage.description')}</p>
           <button className={styles.getStartedButton}>
-            Get Started
+            {t('advantage.button')}
             <img src={arrow} alt="Arrow Icon" className={styles.arrowIcon} />
           </button>
-
-
         </div>
 
         <div className={styles.title}>
-
           <img src={highlight} alt="highlight" className={styles.highlightText} />
           <img src={decoration3} alt="decoration3" className={styles.decoration3} />
-
-          <h1>
-            Redefining Conversations and Enhancing User experience
-          </h1>
+          <h1>{t('advantage.title').split('\n').map((line, index) => (
+            <React.Fragment key={index}>
+              {line}<br />
+            </React.Fragment>))}</h1>
         </div>
       </div>
 
-
-      {/* Background */}
       <div className={styles.background}>
         <div className={styles.contentWrapper}>
-          {/* Accordions */}
           <div className={styles.containerAccordion}>
             <div
               className={`${styles.accordion} ${activeAccordion === 'engage' ? styles.active : ''}`}
               onClick={() => handleAccordionClick('engage')}
             >
-              <h3>Engage</h3>
-              <p>
-                Reach out to visitors proactively using personalized chatbot greetings. Turn website visits into sales opportunities.
-              </p>
+              <h3>{t('advantage.accordion.engage.title')}</h3>
+              <p>{t('advantage.accordion.engage.description')}</p>
             </div>
 
             <div
               className={`${styles.accordion} ${activeAccordion === 'nurture' ? styles.active : ''}`}
               onClick={() => handleAccordionClick('nurture')}
             >
-              <h3>Nurture</h3>
-              <p>
-                Lead customers to a sale through recommended purchases and tailored offerings.
-              </p>
+              <h3>{t('advantage.accordion.nurture.title')}</h3>
+              <p>{t('advantage.accordion.nurture.description')}</p>
             </div>
 
             <div
               className={`${styles.accordion} ${activeAccordion === 'qualify' ? styles.active : ''}`}
               onClick={() => handleAccordionClick('qualify')}
             >
-              <h3>Qualify</h3>
-              <p>
-                Generate and qualify prospects automatically. Transfer high-intent leads to your sales reps in real time to shorten the sales cycle.
-              </p>
+              <h3>{t('advantage.accordion.qualify.title')}</h3>
+              <p>{t('advantage.accordion.qualify.description')}</p>
             </div>
           </div>
 
-          {/* Imagen dinámica */}
           <div className={styles.illustrations}>
             <img
               src={getImageBySection()}
@@ -102,7 +88,6 @@ const Advantage = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };

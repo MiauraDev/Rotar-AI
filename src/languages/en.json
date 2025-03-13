@@ -17,5 +17,57 @@
         "chatgpt": "Chat GPT 4",
         "cardSubtitle": "Big companies use Rotar AI for their services",
         "cardTitle": "AI-driven customer service"
-    }
+    },
+    "about": {
+        "title": "Deliver a high-quality customer experience",
+        "description": "Embrace AI chatbot technology in a GPT-4-supported communication tool to help your customers, empower your team, and reduce your workload."
+    },
+    "gridAbout": {
+        "card1": {
+            "user": "James Kokolomel",
+            "message": "I’ve forgotten my password",
+            "response": "No worries, we’ve all been in a melancholy situation like that. To reset your password, go to the login page and click on Forgot Password? Then, enter the email address and follow it.",
+            "title": "Boost conversations 96% with AI",
+            "description": "Our AI-powered chatbots and automation tools are here to help."
+        },
+        "card2": {
+            "title": "Always accessible with our live chat.",
+            "description": "Enhance Communication with Real-Time Live Chat."
+        },
+        "card3": {
+            "title": "Centralize Your Communication",
+            "description": "Easily respond to chats from all of your channels in one overview."
+        },
+        "card4": {
+            "label": "Conversation\nEmployee",
+            "title": "Gain valuable insights from your audience",
+            "description": "Statistics provide valuable insights into how customers interact with Rotar AI."
+        }
+    },
+    "ourIntegrations": {
+        "title": "Automate your workflow with our integrations",
+        "description": "Connect Rotar AI with your customer service, sales, marketing, and recruitment tools using our user-friendly API, webhooks, or Zapier integration."
+     
+    },
+    
+        "advantage": {
+          "title": "Redefining Conversations and Enhancing User Experience",
+          "description": "Throughout your customer's entire buying journey, Rotar AI allows you to delight them at every step, from their first visit to the final purchase.",
+          "button": "Get Started",
+          "accordion": {
+            "engage": {
+              "title": "Engage",
+              "description": "Reach out to visitors proactively using personalized chatbot greetings. Turn website visits into sales opportunities."
+            },
+            "nurture": {
+              "title": "Nurture",
+              "description": "Lead customers to a sale through recommended purchases and tailored offerings."
+            },
+            "qualify": {
+              "title": "Qualify",
+              "description": "Generate and qualify prospects automatically. Transfer high-intent leads to your sales reps in real time to shorten the sales cycle."
+            }
+        }}
+        
+      
 }

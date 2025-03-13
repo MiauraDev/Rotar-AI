@@ -17,5 +17,56 @@
         "chatgpt": "Chat GPT 4",
         "cardSubtitle": "Grandes empresas usan Rotar AI para sus servicios",
         "cardTitle": "Servicio al cliente impulsado por IA"
-    }
+    },
+    "about": {
+        "title": "Experimenta \n▚ Más Calidad\ncon Rotar ",
+        "description": "Adopta la tecnología de chatbot con IA en una herramienta de comunicación respaldada por GPT-4 para ayudar a tus clientes, empoderar a tu equipo y reducir tu carga de trabajo."
+    },
+    "gridAbout": {
+        "card1": {
+            "user": "James Kokolomel",
+            "message": "He olvidado mi contraseña",
+            "response": "No te preocupes, es algo común. Para restablecer tu contraseña, ve a la página de inicio de sesión, haz clic en ¿Olvidaste tu contraseña?, ingresa tu correo y sigue los pasos.",
+            "title": "Impulsa tus chats un 96% con IA",
+            "description": "Nuestros chatbots y herramientas impulsados por IA están aqui ayudarte."
+        },
+        "card2": {
+            "title": "Siempre accesible con nuestro chat en vivo.",
+            "description": "Mejora la comunicación con chat en vivo en tiempo real."
+        },
+        "card3": {
+            "title": "Centraliza tu comunicación",
+            "description": "Responde fácil los chats de todos tus canales desde una sola vista."
+        },
+        "card4": {
+            "label": "Conversación\nEmpleado",
+            "title": "Obtén información de tu audiencia",
+            "description": "Las estadísticas brindan información útil sobre cómo los clientes interactúan con Rotar AI."
+        }
+    },
+    "ourIntegrations": {
+        "title": "Automatiza con nuestras integraciones",
+        "description": "Conecta Rotar AI con tus herramientas de atención al cliente, ventas, marketing y reclutamiento usando nuestra API, webhooks o integración con Zapier."
+    },
+        "advantage": {
+          "title": "Definiendo Conversaciones\n▚ y Mejorando la UX \ncon Rotar",
+          "description": "Durante todo el recorrido de compra de tu cliente, Rotar AI te permite sorprenderlo en cada etapa, desde su primera visita hasta la compra final.",
+          "button": "Comenzar",
+          "accordion": {
+            "engage": {
+              "title": "Interactúa",
+              "description": "Acércate a los visitantes de forma proactiva con saludos personalizados del chatbot. Convierte visitas en oportunidades de venta."
+            },
+            "nurture": {
+              "title": "Guía",
+              "description": "Guía a los clientes hacia la compra con recomendaciones y ofertas personalizadas."
+            },
+            "qualify": {
+              "title": "Califica",
+              "description": "Genera y califica prospectos automáticamente. Transfiere leads con alta intención a tus vendedores en tiempo real para acortar el ciclo de ventas."
+            }
+          }
+        }
+      
+      
 }
