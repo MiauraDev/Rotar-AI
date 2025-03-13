@@ -25,5 +25,5 @@ Rotar AI is a web project developed with React. The design is based on a previou
 
 ## 🖼️ Vista del Mockup / Mockup Preview
 
-![Mockup Rotar AI](/original-Rotar-AI.png)
+![Mockup Rotar AI](public/original-Rotar-AI.png)
 
