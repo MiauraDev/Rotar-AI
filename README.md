@@ -1,8 +1,29 @@
-# React + Vite
+# Rotar AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Descripción del Proyecto / Project Description
 
-Currently, two official plugins are available:
+ 
+Rotar AI es un proyecto web desarrollado con React. El diseño está basado en un mockup visual previamente elaborado y presenta una interfaz moderna, interactiva y amigable. Cada sección ha sido pensada para mejorar la experiencia del usuario mediante interacciones fluidas, animaciones y componentes visuales dinámicos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+Rotar AI is a web project developed with React. The design is based on a previously created visual mockup and features a modern, interactive, and user-friendly interface. Each section is designed to enhance the user experience through smooth interactions, animations, and dynamic visual components.
+
+## ⚙️ Tecnologías / Technologies
+
+- React  
+- CSS Modules  
+- AOS (Animate On Scroll)  
+- i18next (Multilingual Support)
+
+## 💡 Características / Features
+
+- Diseño visual basado en un mockup / Visual design based on a mockup  
+- Contenido en español e inglés / Spanish and English content  
+- Componente interactivo con acordeón e ilustraciones dinámicas / Interactive accordion component with dynamic illustrations  
+- Animaciones suaves al hacer scroll / Smooth scroll animations  
+- Estructura modular y reutilizable / Modular and reusable structure
+
+## 🖼️ Vista del Mockup / Mockup Preview
+
+![Mockup Rotar AI](/original-Rotar-AI.png)
+
