@@ -75,8 +75,9 @@
 }
 
 .heroButton {
-    background-color: #00ff80;
+    background-color: var(--primary);
     border-radius: 100px;
+    width: 36.4%;
     border: none;
     padding: 25px 74px;
     display: flex;

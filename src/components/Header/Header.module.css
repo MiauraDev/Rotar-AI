@@ -34,9 +34,16 @@
 }
 
 .menu span {
-  font-size: 20px; 
-  color: #383838;
+  font-size: 20px;
+  color: var(--black-secondary);
+  cursor: pointer;
+  transition: color 0.3s ease; 
 }
+
+.menu span:hover {
+  color: var(--black);
+}
+
 
 .groupButton {
   display: flex;

@@ -14,6 +14,7 @@ Rotar AI is a web project developed with React. The design is based on a previou
 - CSS Modules  
 - AOS (Animate On Scroll)  
 - i18next (Multilingual Support)
+- React CountUp (Animate) 
 
 ## 💡 Características / Features
 

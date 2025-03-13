@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
 
-
+import CountUp from 'react-countup';
 import styles from './Present.module.css';
 import woman from '../../assets/images/woman.svg';
 import highlight from '../../assets/shapes/highlight.svg';
@@ -75,7 +75,7 @@ const Present = () => {
                   allow="autoplay; encrypted-media"
                   allowFullScreen
                 ></iframe>
- <button className={styles.closeButton} onClick={closeModal}>×</button>
+                <button className={styles.closeButton} onClick={closeModal}>×</button>
               </div>
             </div>
           )}
@@ -95,7 +95,10 @@ const Present = () => {
         <div className={styles.cards}>
           <div className={styles.card1} data-aos="fade-up">
             <div className={styles.cardContent1}>
-              <h1>+ 500</h1>
+              <h1>
+                + <CountUp start={0} end={500} duration={2.5} enableScrollSpy />
+
+              </h1>
               <p className={styles.cardSubtitle1}>{t('present.cardSubtitle')}</p>
             </div>
           </div>

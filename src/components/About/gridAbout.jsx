@@ -10,6 +10,7 @@ import instagram from '../../assets/icons/instagram.svg';
 import x from '../../assets/icons/x.svg';
 import rotar from '../../assets/icons/rotar.svg';
 import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
@@ -17,7 +18,11 @@ const GridAbout = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    AOS.init({ duration: 600 });
+    AOS.init({
+      duration: 700,        
+      easing: 'ease-in-out', 
+      once: false           
+    });
   }, []);
 
   return (
@@ -47,10 +52,13 @@ const GridAbout = () => {
           </div>
 
           <div className={gridAboutStyles.textContainer}>
-            <h3 className={gridAboutStyles.title}> {t('gridAbout.card1.title').split('\n').map((line, index) => (
-                            <React.Fragment key={index}>
-                              {line}<br />
-                            </React.Fragment>          ))}</h3>
+            <h3 className={gridAboutStyles.title}>
+              {t('gridAbout.card1.title').split('\n').map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}<br />
+                </React.Fragment>
+              ))}
+            </h3>
             <p className={gridAboutStyles.description}>{t('gridAbout.card1.description')}</p>
           </div>
         </div>
@@ -63,7 +71,7 @@ const GridAbout = () => {
           </div>
 
           <div className={gridAboutStyles.chatWrapper}>
-            <div className={gridAboutStyles.chatPreview} data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="150">
+            <div className={gridAboutStyles.chatPreview} data-aos="fade-up" data-aos-delay="150">
               <div className={gridAboutStyles.chatTop}>
                 <div className={gridAboutStyles.ellipse}>
                   <img src={user1} alt="avatar" />
@@ -73,7 +81,7 @@ const GridAbout = () => {
               <div className={gridAboutStyles.chatLineFull}></div>
             </div>
 
-            <div className={gridAboutStyles.chatPreviewWrapper} data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay="200">
+            <div className={gridAboutStyles.chatPreviewWrapper} data-aos="fade-up" data-aos-delay="200">
               <div className={gridAboutStyles.chatPreview}>
                 <div className={gridAboutStyles.chatTop}>
                   <div className={gridAboutStyles.ellipse}>
@@ -134,7 +142,12 @@ const GridAbout = () => {
                 styles={{
                   path: { stroke: '#101010', strokeLinecap: 'butt' },
                   trail: { stroke: '#ffffff' },
-                  text: { fill: '#101010', fontSize: '21.5px', fontWeight: 700, fontFamily: 'IBM Plex Sans, sans-serif' }
+                  text: {
+                    fill: '#101010',
+                    fontSize: '21.5px',
+                    fontWeight: 700,
+                    fontFamily: 'IBM Plex Sans, sans-serif'
+                  }
                 }}
               />
               <div className={gridAboutStyles.chartLabel}>
