@@ -5,13 +5,18 @@ import styles from './Advantage.module.css';
 import highlight from '../../assets/shapes/highlight3.svg';
 import arrow from '../../assets/icons/arrow-up-right-white.svg';
 import decoration3 from '../../assets/shapes/decoration3.svg';
+
 import chat1 from '../../assets/images/chatmode1.svg';
 import chat2 from '../../assets/images/chatmode2.svg';
 import chat3 from '../../assets/images/chatmode3.svg';
+import chat4 from '../../assets/images/chatmode4.svg';
+import chat5 from '../../assets/images/chatmode5.svg';
+import chat6 from '../../assets/images/chatmode6.svg';
+
 import AOS from 'aos';
 
 const Advantage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [activeAccordion, setActiveAccordion] = useState('engage');
 
   useEffect(() => {
@@ -23,9 +28,10 @@ const Advantage = () => {
   };
 
   const getImageBySection = () => {
-    if (activeAccordion === 'nurture') return chat2;
-    if (activeAccordion === 'qualify') return chat3;
-    return chat1;
+    const isSpanish = i18n.language === 'es';
+    if (activeAccordion === 'nurture') return isSpanish ? chat5 : chat2;
+    if (activeAccordion === 'qualify') return isSpanish ? chat6 : chat3;
+    return isSpanish ? chat4 : chat1; // engage
   };
 
   return (
@@ -42,10 +48,13 @@ const Advantage = () => {
         <div className={styles.title}>
           <img src={highlight} alt="highlight" className={styles.highlightText} />
           <img src={decoration3} alt="decoration3" className={styles.decoration3} />
-          <h1>{t('advantage.title').split('\n').map((line, index) => (
-            <React.Fragment key={index}>
-              {line}<br />
-            </React.Fragment>))}</h1>
+          <h1>
+            {t('advantage.title').split('\n').map((line, index) => (
+              <React.Fragment key={index}>
+                {line}<br />
+              </React.Fragment>
+            ))}
+          </h1>
         </div>
       </div>
 
