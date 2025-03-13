@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import gridAboutStyles from './GridAbout.module.css';
+import gridAboutStyles from './gridAbout.module.css';
 import user1 from '../../assets/images/user.jpg';
 import user2 from '../../assets/images/user1.jpg';
 import whatsapp from '../../assets/icons/whatsapp.svg';
