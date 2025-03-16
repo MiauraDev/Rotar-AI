@@ -43,7 +43,7 @@ You can clone this repository and run it locally on your machine.
 git clone https://github.com/MiauraDev/Rotar-AI.git
 
 # 2. Acceder a la carpeta del proyecto / Navigate into the project folder
-cd Rotar-ai
+cd Rotar-AI
 
 # 3. Instalar las dependencias / Install dependencies
 npm install
