@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
 
@@ -16,14 +16,37 @@ import AOS from 'aos';
 
 const Present = () => {
   const { t } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
+
+  const [countVisible, setCountVisible] = useState(false);
+  const countRef = useRef(null);
 
   useEffect(() => {
     AOS.init({ duration: 600 });
   }, []);
 
-  const [isOpen, setIsOpen] = useState(false);
-  const openModal = () => setIsOpen(true);
-  const closeModal = () => setIsOpen(false);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setCountVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (countRef.current) {
+      observer.observe(countRef.current);
+    }
+
+    return () => {
+      if (countRef.current) observer.unobserve(countRef.current);
+    };
+  }, []);
 
   return (
     <section className={styles.hero}>
@@ -38,7 +61,6 @@ const Present = () => {
               </React.Fragment>
             ))}
           </h1>
-
 
           <p className={styles.heroDescription}>
             {t('present.description')}
@@ -68,9 +90,11 @@ const Present = () => {
             <div className={styles.modalOverlay} onClick={closeModal}>
               <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
                 <iframe
-                  src={i18n.language === 'es'
-                    ? 'https://www.youtube.com/embed/v6tk0CxaVU8?si=vnHiJ-TvIAwKS1Ps&autoplay=1'
-                    : 'https://www.youtube.com/embed/rxKFcTRQ_bM?autoplay=1'}
+                  src={
+                    i18n.language === 'es'
+                      ? 'https://www.youtube.com/embed/v6tk0CxaVU8?si=vnHiJ-TvIAwKS1Ps&autoplay=1'
+                      : 'https://www.youtube.com/embed/rxKFcTRQ_bM?autoplay=1'
+                  }
                   title="YouTube Video"
                   allow="autoplay; encrypted-media"
                   allowFullScreen
@@ -94,11 +118,16 @@ const Present = () => {
 
         <div className={styles.cards}>
           <div className={styles.card1} data-aos="fade-up">
-            <div className={styles.cardContent1}>
-              <h1>
-                + <CountUp start={0} end={500} duration={2.5} enableScrollSpy />
-
-              </h1>
+            <div className={styles.cardContent1} ref={countRef}>
+              {countVisible ? (
+                <CountUp start={0} end={500} duration={2.5}>
+                  {({ countUpRef }) => (
+                    <h1>+ <span ref={countUpRef}></span></h1>
+                  )}
+                </CountUp>
+              ) : (
+                <h1>+ <span>0</span></h1>
+              )}
               <p className={styles.cardSubtitle1}>{t('present.cardSubtitle')}</p>
             </div>
           </div>
