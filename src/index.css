@@ -54,3 +54,14 @@ p{
   background-color: var(--secondary); 
   color: var(--black);
 }
+
+/*=============== BREAKPOINTS ===============*/
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  h1{
+    font-size: 3.4rem;
+  }
+
+  p{
+    font-size: 1.05rem;
+  }
+}

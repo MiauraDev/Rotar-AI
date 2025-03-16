@@ -335,3 +335,26 @@ iframe {
     position: relative;
     top: 8px;
   }
+
+  /*=============== BREAKPOINTS ===============*/
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+
+  .highlightText {
+    top: 15.8%;
+    width: 92%;
+    right: 9%;
+  }
+
+  .decoration1{
+    top: 28%;
+    right: 11%;
+    width: 26%;
+  }
+
+  .containerGuide {
+    margin-top: 10%;
+    width: 98%;
+    height: 240px;
+
+  }
+   }
