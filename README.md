@@ -27,6 +27,13 @@ Rotar AI is a web project developed with React. The design is based on a previou
 - Animaciones suaves al hacer scroll / Smooth scroll animations  
 - Estructura modular y reutilizable / Modular and reusable structure
 
+## 📱 Diseño Responsive / Responsive Design
+
+Actualmente se está trabajando en la adaptación completa del diseño a distintos tamaños de pantalla. Por el momento, la resolución ideal para visualizar correctamente todos los elementos es **1950px de ancho**.
+
+Responsive improvements are currently in progress. For now, the ideal screen width to properly display all design elements is **1950px**.
+
+
 ## 🚀 Instalación del Proyecto / Project Installation
 
 Puedes clonar este repositorio y ejecutarlo de forma local en tu máquina.  
