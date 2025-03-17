@@ -108,7 +108,7 @@
   }
 
   .menu span {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .groupButton {
@@ -117,18 +117,18 @@
   }
 
   .groupButton span {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .demoButton {
-    width: 190px;
-    height: 52px;
-    font-size: 18px;
+    width: 155px;
+    height: 40px;
+    font-size: 14px;
     gap: 10px;
   }
 
   .demoButton img {
-    width: 20px;
+    width: 15px;
     height: auto;
   }
 }
