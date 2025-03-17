@@ -84,3 +84,50 @@
 .demoButton:hover img {
   animation: moveRightAndBack 0.5s ease-in-out;
 }
+
+
+@media screen and (min-width: 784px) and (max-width: 1024px) {
+  .navbar {
+    padding: 30px 160px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .logoText {
+    font-size: 25px;
+  }
+
+  .logo img {
+    width: 24px;
+    height: 28px;
+  }
+
+  .menu {
+    gap: 30px;
+  }
+
+  .menu span {
+    font-size: 18px;
+  }
+
+  .groupButton {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .groupButton span {
+    font-size: 18px;
+  }
+
+  .demoButton {
+    width: 190px;
+    height: 52px;
+    font-size: 18px;
+    gap: 10px;
+  }
+
+  .demoButton img {
+    width: 20px;
+    height: auto;
+  }
+}
